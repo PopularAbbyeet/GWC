@@ -9,8 +9,9 @@ let j;
 let fall;
 /* LOAD IMAGES AND OTHER */
 
-//function preload(){
-//}
+function preload(){
+	plum = loadImage('plum.png', width/2, height/2 -300);
+}
 
 //   
 /* SETUP RUNS ONCE */
@@ -27,8 +28,7 @@ function setup() {
 
   // Home screen background + text
   background("palegreen");
-  text(
-    "Plum Rise",width /2, height /2 - 100);
+  text("Plum Rise",width /2, height /2 - 100);
 
 
   // Create buttons for all screens
@@ -42,8 +42,8 @@ function draw() {
   	startButton.h = 50;
   	startButton.collider = "k";
   	startButton.color = "plum";
-  	textSize(50);
-  	startButton.text = "Start";
+	textSize(40);
+	text("Start!",width /2, height /2 - 300);
 
   // Check enter button
 	if (startButton.mouse.presses()) {
