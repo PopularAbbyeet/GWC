@@ -16,8 +16,10 @@ function preload(){
 function setup() {
 	new Canvas(500, 400);
 	world.gravity.y = 0;
-	floor = new Sprite(250, 390, 400, 10, STA);
-	mover = new Sprite(plumIMG, 250, 250, 30, 30, STA);
+	floor = new Sprite(250, 390, 400, 10);
+	floor.collider = "static";
+	mover = new Sprite(plumIMG, 250, 250, 30, 30);
+	mover.collider = "static";
 }
 
 function update() {
@@ -29,7 +31,7 @@ function update() {
 	  world.gravity.y = 10
 		let s = world.getSpriteAt(mouse);
 		if (mover.mouse.hovers) {
-		  mover.physics = DYN;
+		  mover.collider = "dynamic";
 			j = new GrabberJoint(s);
 			j.maxForce = 500;
 		}
