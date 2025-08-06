@@ -10,7 +10,8 @@ let j;
 function setup() {
 	new Canvas(500, 400);
 	world.gravity.y = 10;
-	new Sprite(250, 390, 400, 10, STA);
+	new Sprite(250, 390, 400, 10);
+	Sprite.collider = 'static';
 }
 
 function update() {
