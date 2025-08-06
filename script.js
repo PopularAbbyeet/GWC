@@ -11,7 +11,7 @@ let textvar;
 /* LOAD IMAGES AND OTHER */
 
 function preload(){
-	plum = loadImage('plum.png');
+	plumIMG = loadImage('plum.png');
 }
 
 //   
@@ -44,7 +44,7 @@ function draw() {
   	startButton.collider = "k";
   	startButton.color = "plum";
 	textSize(40);
-	textvar = text("Start!",width /2, height /2 - 300);
+	textvar = text("Start!",width /2, height /2 + 300);
 
   // Check enter button
 	if (startButton.mouse.presses()) {
@@ -61,7 +61,9 @@ function draw() {
 function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
-  plum = loadImage('plum.png', width/2, height/2 -300);
+	
+  plum = createSprite(width/2, height/2 -300);
+  plum.addImage(plumIMG);
   if (screen === 1) {
 	  frameRate(50);
 	  if (frameCount % 50 == 0) {
