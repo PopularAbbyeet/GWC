@@ -72,6 +72,7 @@ function draw() {
 	if (mouse.released() && j) j.remove();
 
   	}
+}
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen1() {
   background("lightblue");
