@@ -62,8 +62,7 @@ function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
 	
-  plum = createSprite(width/2, height/2 -300);
-  plum.addImage(plumIMG);
+  plum = new Sprite(plumIMG, width/2, height/2 -300);
   if (screen === 1) {
 	  frameRate(50);
 	  if (frameCount % 50 == 0) {
