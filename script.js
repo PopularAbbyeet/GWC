@@ -91,44 +91,18 @@ function showScreen1() {
 
 
 /*
-Example screen:
 
-function showScreen2() {
-  background("palegreen");
-  text("You find a guy in the bush with a knife!\n Do you try to fight him?", width / 2, height / 2 - 100);
+Collision ex:
 
-  // Hide A buttons
-  a1Button.pos = { x: -200, y: -200 };
-  a2Button.pos = { x: -200, y: -200 };
-
-  // Show B buttons
-  b1Button.pos = { x: width / 2 - 50, y: height / 2 + 100 };
-  b2Button.pos = { x: width / 2 + 50, y: height / 2 + 100 };
-}
-
-
-*/
-
-/*
-Example button choice yes or no:
-
-
-if (a1Button.mouse.presses()) {
-  showScreen2();
-  screen = 2;
-} else if (a2Button.mouse.presses()) {
-  showScreen5();
-  screen = 5;
-}
-
-
-Typewriter:
-
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+if (spriteA.collides(spriteB)) {
+    // Code to execute when spriteA first collides with spriteB
+    console.log("Sprites are colliding!");
   }
+
+
+
+
+*
 
 
 */
