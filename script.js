@@ -10,7 +10,7 @@ let fall;
 /* LOAD IMAGES AND OTHER */
 
 function preload(){
-	plum = loadImage('plum.png', width/2, height/2 -300);
+	plum = loadImage('plum.png');
 }
 
 //   
@@ -59,8 +59,10 @@ function draw() {
 function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
+  plum = loadImage('plum.png', width/2, height/2 -300);
   if (screen === 1) {
-	  if (frameCount % 100 == 0) {
+	  frameRate(50);
+	  if (frameCount % 50 == 0) {
 		  new Sprite(random(canvas.w), 0, 30, 30);
 	  }
 	  if (mouse.presses()) {
@@ -73,8 +75,11 @@ function showScreen1() {
 
 	  if (mouse.pressing() && j) j.target = mouse;
 	  if (mouse.released() && j) j.remove();
-
-  	  }
+	  }
+   else if (screen > 1) {
+	   frameRate(0);
+   }
+  	  
 }
 
 
