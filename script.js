@@ -2,18 +2,14 @@
 //See the README file for more information
 
 /* VARIABLES */
-let cursor1;
-let font;
 let size =100;
 let startButton;
-let nextButton;
 let screen = 0;
 let counter = 0;
 /* LOAD IMAGES AND OTHER */
 
-function preload(){
-  font = loadFont("assets/Bytesized-Regular.ttf");
-}
+//function preload(){
+//}
 
 //   
 /* SETUP RUNS ONCE */
@@ -22,7 +18,6 @@ function setup() {
   textAlign(CENTER);
   textSize(size);
   fill(0);
-  textFont(font);
   noStroke();
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
   //cursor(cursor1, pointer.x, pointer.y);
@@ -30,14 +25,11 @@ function setup() {
   // Home screen background + text
   background("lightblue");
   text(
-    "The Plumtastic Quest",width /2, height /2 - 100);
+    "Plum Rise",width /2, height /2 - 100);
 
 
   // Create buttons for all screens
   startButton = new Sprite(width/2, height /2 + 150);
-
-  // Start hidden/off-screen buttons
-  nextButton = new Sprite(-100, -100);
 }
 
 /* DRAW LOOP REPEATS */
@@ -58,14 +50,9 @@ function draw() {
     fullscreen(!fs);
     }
   }
-  //Screen one objects, skips text, fast pace text (not type writter, next button)
+
   if (screen === 1) {
-    nextButton.w = 50;
-    nextButton.h = 50;
-    nextButton.collider = "k";
-    nextButton.color = "plum";
-    size = 50;
-    nextButton.text = "Work";
+//start game
   }  
 }
 /* FUNCTIONS TO DISPLAY SCREENS */
@@ -73,7 +60,6 @@ function showScreen1() {
   background("palegreen");
   text("Screen 1 work", width / 2, height / 2 - 100);
   startButton.pos = { x: -100, y: -100 };
-  nextButton.pos = { x: width / 2 - 50, y: height / 2 + 100 };
 }
 
 
