@@ -8,6 +8,9 @@ let counter = 0;
 let j;
 let fall;
 let textvar;
+let plum;
+let plumIMG;
+
 /* LOAD IMAGES AND OTHER */
 
 function preload(){
@@ -43,11 +46,9 @@ function draw() {
   	startButton.h = 100;
   	startButton.collider = "k";
   	startButton.color = "plum";
-	startButton.layer = 2;
 
 	textSize(40);
 	textvar = text("Start!",width /2, height /2 + 200);
-	textvar.layer = 3;
 
   // Check enter button
 	if (startButton.mouse.presses()) {
@@ -69,7 +70,7 @@ function showScreen1() {
   if (screen === 1) {
 	  frameRate(50);
 	  if (frameCount % 50 == 0) {
-		  new Sprite(random(canvas.w), 0, 30, 30);
+		  new Sprite(random(canvas.width), 0, 30, 30);
 	  }
 	  if (mouse.presses()) {
 		  let s = world.getSpriteAt(mouse);
