@@ -7,6 +7,7 @@ let screen = 0;
 let counter = 0;
 let j;
 let fall;
+let textvar;
 /* LOAD IMAGES AND OTHER */
 
 function preload(){
@@ -43,7 +44,7 @@ function draw() {
   	startButton.collider = "k";
   	startButton.color = "plum";
 	textSize(40);
-	text("Start!",width /2, height /2 - 300);
+	textvar = text("Start!",width /2, height /2 - 300);
 
   // Check enter button
 	if (startButton.mouse.presses()) {
@@ -52,6 +53,7 @@ function draw() {
     		if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     			let fs = fullscreen();
    			fullscreen(!fs);
+			textvar.remove();
     		}
   	}
 }
