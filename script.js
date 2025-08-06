@@ -1,16 +1,8 @@
 //Press a button to choose your path
 //See the README file for more information
-let plumIMG;
 let floor;
 let j;
 let mover;
-
-
-function preload(){
-	plumIMG = loadImage('plum.png');
-}
-
-
 
 
 function setup() {
@@ -18,7 +10,7 @@ function setup() {
 	world.gravity.y = 0;
 	floor = new Sprite(250, 390, 400, 10);
 	floor.collider = "static";
-	mover = new Sprite(plumIMG, 250, 250, 30, 30);
+	mover = new Sprite(250, 250, 30, 30);
 	mover.collider = "static";
 }
 
@@ -48,6 +40,8 @@ function update() {
 
 	if (mouse.released() && j) j.remove();
 }
+
+
 
 
 
