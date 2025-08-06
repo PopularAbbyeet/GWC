@@ -17,7 +17,7 @@ function setup() {
 function update() {
 	background(200);
 
-	if (frameCount % 10 == 0) {
+	if (frameCount % 50 == 0) {
 		new Sprite(random(canvas.width), 0, 30, 30);
 	}
 
