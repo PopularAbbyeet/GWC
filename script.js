@@ -28,6 +28,7 @@ function setup() {
   world.gravity.y = 10;
   world.autoDraw = False;
 	
+	
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
   //cursor(cursor1, pointer.x, pointer.y);
 
@@ -46,6 +47,7 @@ startButton.h = 100;
 startButton.collider = "k";
 startButton.color = "plum";
 
+drawSprites();
 textSize(40);
 textvar = text("Start!",width /2, height /2 + 200);
   // Check enter button
