@@ -39,12 +39,15 @@ function setup() {
 /* DRAW LOOP REPEATS */
 function draw() {
   // Always display enter button style (only visible when on-screen)
- 	startButton.w = 250;
+ 	startButton.w = 200;
   	startButton.h = 100;
   	startButton.collider = "k";
   	startButton.color = "plum";
+	startButton.layer = 2;
+
 	textSize(40);
 	textvar = text("Start!",width /2, height /2 + 200);
+	textvar.layer = 3;
 
   // Check enter button
 	if (startButton.mouse.presses()) {
