@@ -3,6 +3,7 @@
 let plumIMG;
 let floor;
 let j;
+let mover;
 
 
 function preload(){
@@ -10,34 +11,41 @@ function preload(){
 }
 
 
+
+
 function setup() {
 	new Canvas(500, 400);
-	world.gravity.y = 10;
-	floor = new Sprite(250, 390, 400, 10);
-	floor.collider = 'static';
+	world.gravity.y = 0;
+	floor = new Sprite(250, 390, 400, 10, STA);
+	mover = new Sprite(plumIMG, 250, 250, 30, 30, STA);
 }
 
 function update() {
 	background(200);
+	
+  if (mouse.presses()) {
 
-	if (frameCount % 50 == 0) {
-		new Sprite(random(canvas.width), 0, 30, 30);
-	}
-
-	if (mouse.presses()) {
+	  
+	  world.gravity.y = 10
 		let s = world.getSpriteAt(mouse);
-		if (s) {
+		if (mover.mouse.hovers) {
+		  mover.physics = DYN;
 			j = new GrabberJoint(s);
-			j.maxForce = 1000;
+			j.maxForce = 500;
 		}
+  }
+		
+	if (frameCount %50 == 0) {
+		new Sprite(random(canvas.w), 0, 30, 30);
 	}
+
+	
+	
 
 	if (mouse.pressing() && j) j.target = mouse;
 
 	if (mouse.released() && j) j.remove();
 }
-
-
 
 
 
