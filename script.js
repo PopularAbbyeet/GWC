@@ -39,24 +39,39 @@ function setup() {
 /* DRAW LOOP REPEATS */
 function draw() {
   // Always display enter button style (only visible when on-screen)
-  startButton.w = 200;
-  startButton.h = 50;
-  startButton.collider = "k";
-  startButton.color = "plum";
-  textSize(size-20)
-  startButton.text = "Start";
+ 	startButton.w = 200;
+  	startButton.h = 50;
+  	startButton.collider = "k";
+  	startButton.color = "plum";
+  	textSize(size-20)
+  	startButton.text = "Start";
 
   // Check enter button
-  if (startButton.mouse.presses()) {
-    showScreen1();
-    screen = 1;
-    if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-    let fs = fullscreen();
-    fullscreen(!fs);
-    }
-  }
+	if (startButton.mouse.presses()) {
+    		showScreen1();
+    		screen = 1;
+    		if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    			let fs = fullscreen();
+   			fullscreen(!fs);
+    		}
+  	}
+	if (screen === 1) {
+		if (frameCount % 100 == 0) {
+			new Sprite(random(canvas.w), 0, 30, 30);
+		}
 
+	if (mouse.presses()) {
+		let s = world.getSpriteAt(mouse);
+		if (s) {
+			j = new GrabberJoint(s);
+			j.maxForce = 1000;
+		}
+	}
 
+	if (mouse.pressing() && j) j.target = mouse;
+	if (mouse.released() && j) j.remove();
+
+  	}
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen1() {
   background("lightblue");
