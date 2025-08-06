@@ -38,7 +38,7 @@ function update() {
   }
 		
 	if (frameCount %50 == 0) {
-		new Sprite(random(canvas.w), 0, 30, 30);
+		new Sprite(random(canvas.width), 0, 30, 30);
 	}
 
 	
