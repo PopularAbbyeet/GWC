@@ -44,7 +44,7 @@ function draw() {
   	startButton.collider = "k";
   	startButton.color = "plum";
 	textSize(40);
-	textvar = text("Start!",width /2, height /2 + 300);
+	textvar = text("Start!",width /2, height /2 + 220);
 
   // Check enter button
 	if (startButton.mouse.presses()) {
