@@ -6,6 +6,8 @@ let size =100;
 let startButton;
 let screen = 0;
 let counter = 0;
+let j;
+let fall;
 /* LOAD IMAGES AND OTHER */
 
 //function preload(){
@@ -19,11 +21,13 @@ function setup() {
   textSize(size);
   fill(0);
   noStroke();
+  world.gravity.y = 10;
+	
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
   //cursor(cursor1, pointer.x, pointer.y);
 
   // Home screen background + text
-  background("lightblue");
+  background("palegreen");
   text(
     "Plum Rise",width /2, height /2 - 100);
 
@@ -39,6 +43,7 @@ function draw() {
   startButton.h = 50;
   startButton.collider = "k";
   startButton.color = "plum";
+  textSize(size-20)
   startButton.text = "Start";
 
   // Check enter button
@@ -53,11 +58,27 @@ function draw() {
 
   if (screen === 1) {
 //start game
+    if (frameCount % 100 == 0) {//frame count % (100) is speed of falling stuff.
+		  fall = new Sprite(random(canvas.w), 0, 30, 30);
+	  }
+
+	  if (mouse.presses()) {
+		let s = world.getSpriteAt(mouse);
+		if (s) {
+			j = new GrabberJoint(s); //I should make grabber only for the one
+			j.maxForce = 1000;
+		}
+	}
+
+	if (mouse.pressing() && j) j.target = mouse;
+
+	if (mouse.released() && j) j.remove();
+}
   }  
 }
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen1() {
-  background("palegreen");
+  background("lightblue");
   text("Screen 1 work", width / 2, height / 2 - 100);
   startButton.pos = { x: -100, y: -100 };
 }
