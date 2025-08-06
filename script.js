@@ -1,7 +1,58 @@
 //Press a button to choose your path
 //See the README file for more information
 
-/* VARIABLES */
+function preload(){
+	plumIMG = loadImage('plum.png');
+}
+
+let j;
+
+function setup() {
+	new Canvas(500, 400);
+	world.gravity.y = 10;
+	new Sprite(250, 390, 400, 10, STA);
+}
+
+function update() {
+	background(200);
+
+	if (frameCount % 10 == 0) {
+		new Sprite(random(canvas.w), 0, 30, 30);
+	}
+
+	if (mouse.presses()) {
+		let s = world.getSpriteAt(mouse);
+		if (s) {
+			j = new GrabberJoint(s);
+			j.maxForce = 1000;
+		}
+	}
+
+	if (mouse.pressing() && j) j.target = mouse;
+
+	if (mouse.released() && j) j.remove();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VARIABLES 
 let startButton;
 let screen = 0;
 let counter = 0;
@@ -11,14 +62,14 @@ let textvar;
 let plum;
 let plumIMG;
 
-/* LOAD IMAGES AND OTHER */
+ LOAD IMAGES AND OTHER 
 
 function preload(){
 	plumIMG = loadImage('plum.png');
 }
 
 //   
-/* SETUP RUNS ONCE */
+ SETUP RUNS ONCE 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
@@ -61,7 +112,7 @@ if (startButton.mouse.presses()) {
     	}
 }
 
-/* FUNCTIONS TO DISPLAY SCREENS */
+ FUNCTIONS TO DISPLAY SCREENS 
 function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
