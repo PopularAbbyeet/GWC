@@ -1,11 +1,14 @@
 //Press a button to choose your path
 //See the README file for more information
+let plumIMG;
+let floor;
+let j;
+
 
 function preload(){
 	plumIMG = loadImage('plum.png');
 }
 
-let j;
 
 function setup() {
 	new Canvas(500, 400);
