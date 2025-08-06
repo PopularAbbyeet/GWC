@@ -57,15 +57,14 @@ function draw() {
   }
 
   if (screen === 1) {
-//start game
-    if (frameCount % 100 == 0) {//frame count % (100) is speed of falling stuff.
-		  fall = new Sprite(random(canvas.w), 0, 30, 30);
-	  }
+	if (frameCount % 100 == 0) {
+		new Sprite(random(canvas.w), 0, 30, 30);
+	}
 
-	  if (mouse.presses()) {
+	if (mouse.presses()) {
 		let s = world.getSpriteAt(mouse);
 		if (s) {
-			j = new GrabberJoint(s); //I should make grabber only for the one
+			j = new GrabberJoint(s);
 			j.maxForce = 1000;
 		}
 	}
@@ -73,9 +72,8 @@ function draw() {
 	if (mouse.pressing() && j) j.target = mouse;
 
 	if (mouse.released() && j) j.remove();
-}
-  }  
-}
+
+  }
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen1() {
   background("lightblue");
