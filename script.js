@@ -2,7 +2,6 @@
 //See the README file for more information
 
 /* VARIABLES */
-let size =100;
 let startButton;
 let screen = 0;
 let counter = 0;
@@ -18,7 +17,7 @@ let fall;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
-  textSize(size);
+  textSize(100);
   fill(0);
   noStroke();
   world.gravity.y = 10;
@@ -43,7 +42,7 @@ function draw() {
   	startButton.h = 50;
   	startButton.collider = "k";
   	startButton.color = "plum";
-  	textSize(size-20)
+  	textSize(50);
   	startButton.text = "Start";
 
   // Check enter button
