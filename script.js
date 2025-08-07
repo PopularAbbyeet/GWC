@@ -61,7 +61,6 @@ function setup() {
   fill(0);
   noStroke();
   world.gravity.y = 10;
-  world.autoDraw = false;
 	
 	
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
@@ -76,26 +75,27 @@ function setup() {
   startButton = new Sprite(width/2, height /2 + 150);
 }
 
+function draw() {
   // Always display enter button style (only visible when on-screen)
-startButton.w = 200;
-startButton.h = 100;
-startButton.collider = "k";
-startButton.color = "plum";
-
-drawSprites();
-textSize(40);
-textvar = text("Start!",width /2, height /2 + 200);
-  // Check enter button
-if (startButton.mouse.presses()) {
-	showScreen1();
-    	screen = 1;
-    	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-    		let fs = fullscreen();
-   		//fullscreen(!fs);
-		//textvar.remove();
-    	}
+	startButton.w = 200;
+	startButton.h = 100;
+	startButton.collider = "k";
+	startButton.color = "plum";
+	
+	drawSprites();
+	textSize(40);
+	textvar = text("Start!",width /2, height /2 + 200);
+	  // Check enter button
+	if (startButton.mouse.presses()) {
+		showScreen1();
+	    	screen = 1;
+	    	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+	    		let fs = fullscreen();
+	   		//fullscreen(!fs);
+			//textvar.remove();
+	    	}
+	}
 }
-
 //FUNCTIONS TO DISPLAY SCREENS 
 function showScreen1() {
   background("lightblue");
