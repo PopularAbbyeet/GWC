@@ -47,14 +47,13 @@ function update() {
 
 
 
- LOAD IMAGES AND OTHER 
+ //LOAD IMAGES AND OTHER 
 
 function preload(){
 	plumIMG = loadImage('plum.png');
 }
 
-//   
- SETUP RUNS ONCE 
+ //SETUP RUNS ONCE 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
@@ -97,7 +96,7 @@ if (startButton.mouse.presses()) {
     	}
 }
 
- FUNCTIONS TO DISPLAY SCREENS 
+//FUNCTIONS TO DISPLAY SCREENS 
 function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
