@@ -16,6 +16,7 @@ function preload(){
 
  //SETUP RUNS ONCE 
 function setup() {
+  background("palegreen");
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
   textSize(100);
