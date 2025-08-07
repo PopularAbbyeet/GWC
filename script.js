@@ -70,12 +70,8 @@ function setup() {
   noStroke();
   world.gravity.y = 10;
 	
-	
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
   //cursor(cursor1, pointer.x, pointer.y);
-
-  // Home screen background + text
-  background("palegreen");
   text("Plum Rise",width /2, height /2 - 100);
 
 
@@ -85,6 +81,7 @@ function setup() {
 
 function draw() {
   // Always display enter button style (only visible when on-screen)
+	background("palegreen");
 	startButton.w = 200;
 	startButton.h = 100;
 	startButton.collider = "k";
