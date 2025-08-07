@@ -113,9 +113,7 @@ function showScreen1() {
   plum = new Sprite(plumIMG, width/2, height/2 -300);
 	
   if (screen === 1) {
-	  
-	  frameRate(50);
-	  if (frameCount % 50 == 0) {
+	  	  if (frameCount % 50 == 0) {
 		  new Sprite(random(canvas.width), 0, 30, 30);
 	  }
 	  if (mouse.presses()) {
