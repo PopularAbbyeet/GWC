@@ -1,5 +1,3 @@
-/*
-
 
 
  //LOAD IMAGES AND OTHER 
