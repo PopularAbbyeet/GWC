@@ -1,3 +1,6 @@
+/*
+
+
 
  //LOAD IMAGES AND OTHER 
 let startButton;
@@ -96,7 +99,7 @@ if (spriteA.collides(spriteB)) {
 
 
 
-*
+*/
 
 
 */
