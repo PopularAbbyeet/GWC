@@ -91,7 +91,7 @@ if (startButton.mouse.presses()) {
     	screen = 1;
     	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     		let fs = fullscreen();
-   		fullscreen(!fs);
+   		//fullscreen(!fs);
 		//textvar.remove();
     	}
 }
