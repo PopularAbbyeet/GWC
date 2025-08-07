@@ -1,8 +1,10 @@
 //Press a button to choose your path
 //See the README file for more information
+/*
 let floor;
 let j;
 let mover;
+
 
 
 function setup() {
@@ -40,35 +42,10 @@ function update() {
 
 	if (mouse.released() && j) j.remove();
 }
+*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* VARIABLES 
-let startButton;
-let screen = 0;
-let counter = 0;
-let j;
-let fall;
-let textvar;
-let plum;
-let plumIMG;
 
  LOAD IMAGES AND OTHER 
 
@@ -116,7 +93,7 @@ if (startButton.mouse.presses()) {
     	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     		let fs = fullscreen();
    		fullscreen(!fs);
-		textvar.remove();
+		//textvar.remove();
     	}
 }
 
