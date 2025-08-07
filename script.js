@@ -1,51 +1,3 @@
-//Press a button to choose your path
-//See the README file for more information
-/*
-let floor;
-let j;
-let mover;
-
-
-
-function setup() {
-	new Canvas(500, 400);
-	world.gravity.y = 0;
-	floor = new Sprite(250, 390, 400, 10);
-	floor.collider = "static";
-	mover = new Sprite(250, 250, 30, 30);
-	mover.collider = "static";
-}
-
-function update() {
-	background(200);
-	
-  if (mouse.presses()) {
-
-	  
-	  world.gravity.y = 10
-		let s = world.getSpriteAt(mouse);
-		if (mover.mouse.hovers) {
-		  mover.collider = "dynamic";
-			j = new GrabberJoint(s);
-			j.maxForce = 500;
-		}
-  }
-		
-	if (frameCount %50 == 0) {
-		new Sprite(random(canvas.width), 0, 30, 30);
-	}
-
-	
-	
-
-	if (mouse.pressing() && j) j.target = mouse;
-
-	if (mouse.released() && j) j.remove();
-}
-*/
-
-
-
 
  //LOAD IMAGES AND OTHER 
 let startButton;
@@ -94,7 +46,6 @@ function draw() {
 	if (startButton.mouse.presses()) {
 		showScreen1();
 	    	screen = 1;
-		    background("lightblue");
 
 
 	}
