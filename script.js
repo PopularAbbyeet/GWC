@@ -61,7 +61,7 @@ function setup() {
   fill(0);
   noStroke();
   world.gravity.y = 10;
-  world.autoDraw = False;
+  world.autoDraw = false;
 	
 	
   //cursor1 = loadImage('/assets/cursor/astro_arrow.cur');
