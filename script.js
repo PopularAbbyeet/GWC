@@ -97,11 +97,9 @@ function draw() {
 	if (startButton.mouse.presses()) {
 		showScreen1();
 	    	screen = 1;
-	    	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-	    		let fs = fullscreen();
-	   		//fullscreen(!fs);
-			//textvar.remove();
-	    	}
+		    background("lightblue");
+
+
 	}
 }
 //FUNCTIONS TO DISPLAY SCREENS 
@@ -109,7 +107,6 @@ function showScreen1() {
   background("lightblue");
   startButton.pos = { x: -100, y: -100 };
   textvar.pos =  { x: -100, y: -100 };
-	
   plum = new Sprite(plumIMG, width/2, height/2 -300);
 	
   if (screen === 1) {
