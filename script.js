@@ -33,6 +33,8 @@ function setup() {
 
 function draw() {
   // Always display enter button style (only visible when on-screen)
+	background("palegreen");
+
 	startButton.w = 200;
 	startButton.h = 100;
 	startButton.collider = "k";
@@ -48,7 +50,6 @@ function draw() {
 
 
 	}
-	background("palegreen");
 
 }
 //FUNCTIONS TO DISPLAY SCREENS 
