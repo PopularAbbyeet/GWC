@@ -48,6 +48,14 @@ function update() {
 
 
  //LOAD IMAGES AND OTHER 
+let startButton;
+let screen = 0;
+let counter = 0;
+let j;
+let fall;
+let textvar;
+let plum;
+let plumIMG;
 
 function preload(){
 	plumIMG = loadImage('plum.png');
