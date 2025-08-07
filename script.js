@@ -61,24 +61,7 @@ function showScreen1() {
   textvar.pos =  { x: -100, y: -100 };
   plum = new Sprite(plumIMG, width/2, height/2 -300);
 	
-  if (screen === 1) {
-	  	  if (frameCount % 50 == 0) {
-		  new Sprite(random(canvas.width), 0, 30, 30);
-	  }
-	  if (mouse.presses()) {
-		  let s = world.getSpriteAt(mouse);
-		  if (s) {
-			  j = new GrabberJoint(s);
-			  j.maxForce = 1000;
-		  }
-	  }
 
-	  if (mouse.pressing() && j) j.target = mouse;
-	  if (mouse.released() && j) j.remove();
-	  }
-   else if (screen > 1) {
-	   frameRate(0);
-   }
   	  
 }
 
